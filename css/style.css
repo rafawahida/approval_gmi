@@ -1,0 +1,268 @@
+/* RESET STYLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    background: #f2f4f7;
+}
+
+/* LAYOUT WRAPPER */
+.layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 240px;
+    background: #1e2a38;
+    color: #ffffff;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.sidebar nav {
+    flex: 1;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #dfe6ee;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar nav a:hover {
+    background: #2d3e50;
+    color: #ffffff;
+}
+
+.sidebar nav .logout {
+    background: #c0392b;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.sidebar nav .logout:hover {
+    background: #a93226;
+}
+
+/* CONTENT AREA */
+
+.content {
+    flex: 1;
+    padding: 25px 30px;
+    overflow-y: auto;
+}
+
+.header h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.header p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: #2c3e50;
+}
+
+/* BUTTON STYLE */
+button, .btn {
+    padding: 10px 15px;
+    background: #3498db;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover, .btn:hover {
+    background: #2980b9;
+}
+
+/* TABLE STYLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+table th {
+    padding: 12px;
+    background: #34495e;
+    color: white;
+    text-align: left;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background: #f0f3f5;
+}
+
+/* FORM */
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* CHART STYLE */
+canvas {
+    margin-top: 15px;
+    max-width: 450px;
+    width: 100%;
+    display: block;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 190px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 15px;
+    }
+
+    .sidebar nav a {
+        margin-right: 10px;
+        display: inline-block;
+    }
+}
+
+.login-background {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e2a38, #34495e);
+}
+
+.login-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-box {
+    width: 380px;
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+    animation: fadeIn 0.4s ease;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.login-box label {
+    font-weight: bold;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f8f8f8;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: #3498db;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
